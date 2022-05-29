@@ -1,4 +1,4 @@
-package com.example.shop_clone.modul;
+package com.example.shop_clone.modul.userEntity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -10,5 +10,5 @@ import javax.persistence.Table;
 @Setter
 @Entity
 @Table(name = "adress")
-public class Adres {
+public class Address {
 }

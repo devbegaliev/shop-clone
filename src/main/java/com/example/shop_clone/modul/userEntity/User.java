@@ -1,4 +1,4 @@
-package com.example.shop_clone.modul;
+package com.example.shop_clone.modul.userEntity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -18,11 +18,11 @@ public class User {
     private String email;
     private String password;
     private String contact;
-    @OneToOne
-    @JoinColumn(name = "image_id",insertable = false,updatable = false)
-    private Image imageid;
-
     private String status;
-    private
+
+
+    @ManyToOne
+    @JoinColumn(name = ("user_type_role"))
+
 
 }
