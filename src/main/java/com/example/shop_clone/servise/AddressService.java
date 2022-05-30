@@ -1,6 +1,8 @@
 package com.example.shop_clone.servise;
 
 
+
+
 import com.example.shop_clone.exception.BadException;
 import com.example.shop_clone.modul.userDto.AddressDto;
 import com.example.shop_clone.modul.userEntity.Address;
@@ -68,6 +70,13 @@ public class AddressServise {
         convertDtoToAddress(dto, address);
         address.setUpdateAt(LocalDateTime.now());
         addressRepository.save(address);
+        return true;
+    }
+
+
+    public boolean delete(Integer id) {
+        Address address = check(id);
+        addressRepository.delete(address);
         return true;
     }
 }
