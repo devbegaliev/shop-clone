@@ -1,5 +1,6 @@
-package com.example.shop_clone.modul;
+package com.example.shop_clone.modul.praductEntity;
 
+import com.example.shop_clone.modul.praductEntity.PraductType;
 import lombok.Getter;
 import lombok.Setter;
 

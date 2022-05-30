@@ -1,4 +1,5 @@
-package com.example.shop_clone.modul;
+package com.example.shop_clone.modul.praductEntity;
+
 
 import lombok.Getter;
 import lombok.Setter;
@@ -9,24 +10,14 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Entity
-@Table(name = "order_items")
-public class OrderItem {
+@Table(name = "marchents")
+public class Merchant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
-    @ManyToOne
-    @JoinColumn(name = "order_id",updatable = false,insertable = false)
-    private Order order_id;
-
-    @ManyToOne
-    @JoinColumn(name = "praduct_id",insertable = false,updatable = false)
-    private Praduct praduct_id;
-
+    private String name;
     private String status;
     private LocalDateTime create_at;
     private LocalDateTime updated_at;
     private LocalDateTime delete_at;
 }
-
-

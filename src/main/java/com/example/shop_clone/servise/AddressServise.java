@@ -2,7 +2,7 @@ package com.example.shop_clone.servise;
 
 
 import com.example.shop_clone.exception.BadException;
-import com.example.shop_clone.modul.dto.AddressDto;
+import com.example.shop_clone.modul.userDto.AddressDto;
 import com.example.shop_clone.modul.userEntity.Address;
 import com.example.shop_clone.repositories.user.AddressRepository;
 import org.springframework.stereotype.Service;

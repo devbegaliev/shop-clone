@@ -1,6 +1,6 @@
 package com.example.shop_clone.controller;
 
-import com.example.shop_clone.modul.dto.AddressDto;
+import com.example.shop_clone.modul.userDto.AddressDto;
 import com.example.shop_clone.servise.AddressServise;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,5 +1,6 @@
-package com.example.shop_clone.modul.dto;
+package com.example.shop_clone.modul.userDto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -7,6 +8,7 @@ import javax.validation.constraints.NotBlank;
 
 @Getter
 @Setter
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class AddressDto {
     private Integer id;
     private String region;
