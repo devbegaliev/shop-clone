@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull;
 @Getter
 @Setter
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class MarchentDto {
+public class MerchantDto {
     private Integer id;
     @NotNull(message = "not found")
     private String name;
