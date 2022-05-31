@@ -1,4 +1,4 @@
-package com.example.shop_clone.servise;
+package com.example.shop_clone.service.user;
 
 
 

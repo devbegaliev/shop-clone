@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -18,7 +19,15 @@ public class User {
     private String email;
     private String password;
     private String contact;
-    private String status;
+    private Boolean status;
+    @Column(name = "create_at")
+    private LocalDateTime createdAt;
+
+    @Column(name = "update_at")
+    private LocalDateTime updatedAt;
+
+    @Column(name = "deleted_at")
+    private LocalDateTime deletedAt;
 
 
     @ManyToOne
