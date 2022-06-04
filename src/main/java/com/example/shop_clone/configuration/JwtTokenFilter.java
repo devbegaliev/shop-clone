@@ -31,12 +31,14 @@ public class JwtTokenFilter extends OncePerRequestFilter {
 
         if (header == null || header.startsWith("Bearer")) {
             filterChain.doFilter(request, response);
+            return;
         }
 
         String token = header.split(" ")[1];
 
         if (!tokenUtil.validate(token)) {
             filterChain.doFilter(request, response);
+            return;
         }
         String username = tokenUtil.getUsername(token);
         UserDetails userDetails = customUserDetailService.loadUserByUsername(username);

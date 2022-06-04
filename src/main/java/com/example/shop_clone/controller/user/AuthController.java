@@ -1,8 +1,8 @@
-package com.example.shop_clone.controller;
+package com.example.shop_clone.controller.user;
 
 import com.example.shop_clone.modul.userDto.AuthDto;
 import com.example.shop_clone.modul.userDto.RegisterDto;
-import com.example.shop_clone.servise.AuthService;
+import com.example.shop_clone.service.user.AuthService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,13 +14,13 @@ public class AuthController {
     private AuthService authService;
     @PostMapping
     public ResponseEntity<?> register(@RequestBody RegisterDto dto) {
-        boolean ans = authService.register(dto);
+        var ans = authService.register(dto);
         return ResponseEntity.ok(ans);
     }
 
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody AuthDto dto) {
-        AuthDto ans = authService.login(dto);
+        var ans = authService.login(dto);
         return ResponseEntity.ok(ans);
     }
 

@@ -1,8 +1,8 @@
-package com.example.shop_clone.controller;
+package com.example.shop_clone.controller.user;
 
 
 import com.example.shop_clone.modul.userEntity.UserRole;
-import com.example.shop_clone.servise.UserRoleService;
+import com.example.shop_clone.service.user.UserRoleService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

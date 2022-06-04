@@ -2,6 +2,7 @@ package com.example.shop_clone.configuration;
 
 
 import lombok.AllArgsConstructor;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -27,7 +28,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests()
                 .antMatchers("/user").permitAll()
-                .antMatchers("/userstype").hasAnyRole("Admin");
+                .antMatchers("/userstype").hasAnyRole("ROLE_ADMIN")
+                .anyRequest().permitAll()
+        ;
 
         http.addFilterBefore( jwtTokenFilter, UsernamePasswordAuthenticationFilter.class);
     }

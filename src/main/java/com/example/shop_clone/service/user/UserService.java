@@ -1,4 +1,4 @@
-package com.example.shop_clone.service;
+package com.example.shop_clone.service.user;
 
 import com.example.shop_clone.repositories.UserRepository;
 
